@@ -17,7 +17,9 @@ export function Waitlist() {
 
   const navigate = useNavigate();
 
-  const handleFormSubmit = async (e: MouseEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (
+    e: MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => {
     e.preventDefault();
     try {
       writeUserData(username, email);

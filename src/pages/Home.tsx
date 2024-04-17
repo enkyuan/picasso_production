@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@mantine/core";
 import { Link } from "react-router-dom";
 
@@ -8,9 +7,19 @@ export default function Home() {
   return (
     <div>
       <Spline scene="https://prod.spline.design/fU2f1Myk8B97Wt7h/scene.splinecode" />
-      <Spline style={{ height: "600px" }}
-      scene="https://prod.spline.design/AlpxgttatjkQI-K9/scene.splinecode" />
-      <div style={{ height: "160px", display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
+      <Spline
+        style={{ height: "600px" }}
+        scene="https://prod.spline.design/AlpxgttatjkQI-K9/scene.splinecode"
+      />
+      <div
+        style={{
+          height: "160px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "black",
+        }}
+      >
         <Button
           variant="gradient"
           gradient={{
@@ -20,7 +29,12 @@ export default function Home() {
           }}
           component={Link}
           to="/waitlist"
-          style={{ height: '70px', width: '300px', borderRadius: '999px', fontSize: '24px'}}
+          style={{
+            height: "70px",
+            width: "300px",
+            borderRadius: "999px",
+            fontSize: "24px",
+          }}
         >
           Join the waitlist
         </Button>
