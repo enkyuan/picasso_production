@@ -22,6 +22,12 @@ export function Waitlist() {
     e: MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
   ) => {
     e.preventDefault();
+
+    if (!username || !email || username === " " || email === " ") {
+      alert("Both fields are required");
+      return;
+    }
+
     try {
       writeUserData(username, email);
 

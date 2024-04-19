@@ -15,7 +15,7 @@ export function HeaderMegaMenu() {
   return (
     <Box>
       <header className={classes.header}>
-        <Group justify="space-between" h="100%">
+        <Group justify="space-between" h="100%" className={classes.webHeader}>
           <Link to="/">
             <img src={logo} height="48px" />
           </Link>
@@ -52,45 +52,44 @@ export function HeaderMegaMenu() {
             onClick={toggleDropdown}
           />
         </Group>
-
-        {isDropdownVisible ? (
-          <div className={classes.fullScreenDiv}>
-            <a
-              href="/"
-              className={classes.dropdownlink}
-              style={{ fontWeight: "bold" }}
-            >
-              Home
-            </a>
-            <a
-              href="/contact"
-              className={classes.dropdownlink}
-              style={{ fontWeight: "bold" }}
-            >
-              Contact
-            </a>
-            <Button
-              variant="gradient"
-              gradient={{
-                from: "rgba(237, 189, 255, 1)",
-                to: "rgba(159, 202, 253, 0.5)",
-                deg: 210,
-              }}
-              component={Link}
-              to="/waitlist"
-              style={{
-                height: "70px",
-                width: "300px",
-                borderRadius: "999px",
-                fontSize: "24px",
-              }}
-              onClick={toggleDropdown}
-            >
-              Join the waitlist
-            </Button>
-          </div>
-        ) : null}
       </header>
+      {isDropdownVisible ? (
+        <div className={classes.fullScreenDiv}>
+          <a
+            href="/"
+            className={classes.dropdownlink}
+            style={{ fontWeight: "bold" }}
+          >
+            Home
+          </a>
+          <a
+            href="/contact"
+            className={classes.dropdownlink}
+            style={{ fontWeight: "bold" }}
+          >
+            Contact
+          </a>
+          <Button
+            variant="gradient"
+            gradient={{
+              from: "rgba(237, 189, 255, 1)",
+              to: "rgba(159, 202, 253, 0.5)",
+              deg: 210,
+            }}
+            component={Link}
+            to="/waitlist"
+            style={{
+              height: "70px",
+              width: "300px",
+              borderRadius: "999px",
+              fontSize: "24px",
+            }}
+            onClick={toggleDropdown}
+          >
+            Join the waitlist
+          </Button>
+        </div>
+      ) : null}
     </Box>
   );
 }
