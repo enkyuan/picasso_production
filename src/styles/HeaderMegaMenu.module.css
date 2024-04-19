@@ -14,8 +14,9 @@
   -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   position: fixed;
-  top: 0;
+  justify-content: center;
   z-index: 9999;
+  top: 0;
 }
 
 .link {
