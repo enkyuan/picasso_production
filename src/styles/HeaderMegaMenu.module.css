@@ -1,7 +1,7 @@
 .header {
   height: 60px;
   width: 100%;
-  max-width: 1405px;
+  max-width: 1200px;
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   margin-left: var(--mantine-spacing-xs);
